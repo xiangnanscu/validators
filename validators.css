@@ -1,0 +1,43 @@
+*{
+  margin:0;
+  padding: 0;
+}
+input {
+  padding: .5em;
+}
+.errorlist, 
+.hintlist{
+  z-index: 1;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+}
+.errorlist li,
+.hintlist li{
+  display: block;
+  word-wrap: break-word;
+  padding: 6px;
+  font-size:90%;
+  text-align: left;
+}
+.errorlist:before,
+.hintlist:before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+.errorlist{
+  background-color: #c04848;
+}
+.errorlist:before{
+  border-right: 6px solid #c04848;
+}
+.hintlist{
+  background-color: #3CB371;
+}
+.hintlist:before{
+  border-right: 6px solid #3CB371;
+}
