@@ -1,5 +1,39 @@
 # validators
-A very simple yet configurable error/hint message system for form validation.
+A very simple yet configurable error/hint message system for form validation. Curently support validations:<br/>
+<table>
+  <tr>
+    <th>Validator</th>
+    <th>Effect</th>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>this input can't be ignored</td>
+  </tr>
+  <tr>
+    <td>not_required</td>
+    <td>this input can be ignored</td>
+  </tr>
+  <tr>
+    <td>min_len(x)</td>
+    <td>the length of input value can't be less than x </td>
+  </tr>
+  <tr>
+    <td>max_len(x)</td>
+    <td>the length of input value can't be more than x </td>
+  </tr>
+  <tr>
+    <td>min_val(x)</td>
+    <td>the input number can't be less than x </td>
+  </tr>
+  <tr>
+    <td>max_val(x)</td>
+    <td>the input number can't be more than x </td>
+  </tr>
+  <tr>
+    <td>regex(REGEX_EXPRESSION)</td>
+    <td>the input value must match REGEX_EXPRESSION </td>
+  </tr>      
+</table>
 
 # requirements:
 1.jquery 1.7 (or maybe smaller, you could try)<br/>
@@ -24,7 +58,7 @@ Is there anything better than an real example? No, so let's start here:<br/>
 1.add jquery, `validators.css` and `validators.js` to your html page (like `home.html`).<br />
 
 2.config `form_fields` object in `validators.js` like this(hint or validators are optional):
-<pre>var form_fields = {
+```var form_fields = {
   username :{
     hint       : 'enter your username(2 chars at least, 10 at most)', 
     validators : [required, min_len(2), max_len(10)]
@@ -32,7 +66,7 @@ Is there anything better than an real example? No, so let's start here:<br/>
   password :{
     validators : [required, regex(/^[\da-zA-Z@$_!-]{6,32}$/)]
   }, 
-}</pre>
+}```
 Above code means that :<br />
  1)username and password are required. <br />
  2)When you in username, a green hint message `enter your username(2 chars at least, 10 at most)` will show.<br />
