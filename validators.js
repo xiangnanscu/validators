@@ -12,7 +12,7 @@ var form_fields = {
     }, 
     email :{
         hint:'请填写常用邮箱, 用于找回密码', 
-        validators:[not_required]
+        validators:[not_required, regex(/^[\w\d]+@([\w-]+\.)+[\w-]+$/)]
     }, 
     password:{
         hint:'请填写6到32位密码, 只能由数字, 英文字母或半角符号@$_!-组成', 
@@ -79,7 +79,7 @@ function make_errorlist(messages, class_name) {
     class_name = class_name || FORM_ERROR_CLASS
     var estr = '';
     $.each(messages, function(i, message) {
-        estr += '<li><pre>' + message + '</pre></li>'
+        estr += '<li>' + message + '</li>'
     });
     return $('<ul class="'+class_name+'">' + estr + '</ul>');
 }
