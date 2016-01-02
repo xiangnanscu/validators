@@ -58,7 +58,8 @@ Is there anything better than an real example? No, so let's start here:<br/>
 1.add jquery, `validators.css` and `validators.js` to your html page (like `home.html`).<br />
 
 2.config `form_fields` object in `validators.js` like this(hint or validators are optional):
-```var form_fields = {
+```
+var form_fields = {
   username :{
     hint       : 'enter your username(2 chars at least, 10 at most)', 
     validators : [required, min_len(2), max_len(10)]
@@ -66,7 +67,8 @@ Is there anything better than an real example? No, so let's start here:<br/>
   password :{
     validators : [required, regex(/^[\da-zA-Z@$_!-]{6,32}$/)]
   }, 
-}```
+}
+```
 Above code means that :<br />
  1)username and password are required. <br />
  2)When you in username, a green hint message `enter your username(2 chars at least, 10 at most)` will show.<br />
