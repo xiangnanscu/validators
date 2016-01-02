@@ -6,18 +6,13 @@ var TIP_OFFSET_LEFT = 10;
 var PASS_THIS = {};
 
 var form_fields = {
-    sfzh :{
-        hint:'请填写18位身份证号(只能由数字和字母X组成)', 
-        validators:[required, regex(/^\d{17}[\dXx]$/)]
-    }, 
-    email :{
-        hint:'请填写常用邮箱, 用于找回密码', 
-        validators:[not_required, regex(/^[\w\d]+@([\w-]+\.)+[\w-]+$/)]
-    }, 
-    password:{
-        hint:'请填写6到32位密码, 只能由数字, 英文字母或半角符号@$_!-组成', 
-        validators:[required, regex(/^[\da-zA-Z@$_!-]{6,32}$/)]
-    },
+  username :{
+    hint       : 'enter your username(2 chars at least, 10 at most)', 
+    validators : [required, min_len(2), max_len(10)]
+  }, 
+  password :{
+    validators : [required, regex(/^[\da-zA-Z@$_!-]{6,32}$/)]
+  }
 }
 
 function required(value, name){
