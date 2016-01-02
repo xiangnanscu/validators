@@ -74,6 +74,6 @@ Above code means that :<br />
  2)When you in username, a green hint message `enter your username(2 chars at least, 10 at most)` will show.<br />
  3)There must be 2 characters at least and 10 at most in username. <br />
 
-What if a input is not required, but you still want some validations? you need to add `not_required`.like:
+What if a input is not required, but you still want some validations when user offer value? you need to add `not_required`.like:
 <pre>validators : [not_required,  min_len(2), max_len(10)]</pre>
 3.enjoy it.
