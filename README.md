@@ -38,7 +38,7 @@ Curently support validations(for `input` and `textarea`):<br/>
 </table>
 
 # requirements:
-1.jquery 1.7 (or maybe smaller, you could try)<br/>
+1.jquery 1.11 (or maybe smaller, you could try)<br/>
 
 # usage:
 Is there anything better than an real example? No, so let's start here:<br/>
