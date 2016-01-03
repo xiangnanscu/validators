@@ -1,5 +1,5 @@
 # validators
-A very simple yet configurable error/hint message system for form validation. Curently support validations:<br/>
+A very simple yet configurable error/hint message system for form validation. Curently support validations(for `input` and `textarea`):<br/>
 <table>
   <tr>
     <th>Validator</th>
