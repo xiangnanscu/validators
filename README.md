@@ -1,4 +1,5 @@
 # validators
+![image](http://img2.ph.126.net/i04limKLx8cOLWA8SMimeg==/6631265677794987944.png)
 A very simple yet configurable error/hint message system for form validation. Curently support validations(for `input` and `textarea`):<br/>
 <table>
   <tr>
